@@ -1,0 +1,784 @@
+================================================================================
+Appcelerator Titanium Diagnostics Build Log
+The contents of this file are useful to send to Appcelerator Support if
+reporting an issue to help us understand your environment, build settings
+and aid in debugging. Please attach this log to any issue that you report.
+================================================================================
+
+Starting build at 10/13/11 03:29
+
+Build details:
+
+   timestamp=07/21/11 09:36
+   version=1.7.2
+   githash=97c3689
+
+
+Script arguments:
+   /Library/Application Support/Titanium/mobilesdk/osx/1.7.2/iphone/builder.py
+   simulator
+   4.3
+   /Users/aaronksaunders/Documents/Indulus/ci.linkedIn
+   ci.linkedIn
+   ci.linkedIn
+   universal
+   iphone
+   192.168.29.1:51396
+
+Building from: /Library/Application Support/Titanium/mobilesdk/osx/1.7.2/iphone
+Platform: Darwin Kernel Version 10.8.0: Tue Jun  7 16:33:36 PDT 2011; root:xnu-1504.15.3~1/RELEASE_I386
+
+Xcode path is: /Developer
+
+
+githash=97c3689, existing_git_hash=97c3689
+writing contents of /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/project.xcconfig:
+
+TI_VERSION=1.7.2
+TI_SDK_DIR=/Library/Application Support/Titanium/mobilesdk/osx/$(TI_VERSION)/iphone
+TI_APPID=ci.linkedIn
+OTHER_LDFLAGS[sdk=iphoneos*]=$(inherited) -weak_framework iAd
+OTHER_LDFLAGS[sdk=iphonesimulator*]=$(inherited) -weak_framework iAd
+#include "module"
+
+old contents
+
+
+Generated the following stylecode code:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>classes</key>
+		<dict>
+</dict>
+
+		<key>classes_density</key>
+		<dict>
+</dict>
+
+		<key>ids</key>
+		<dict>
+</dict>
+
+		<key>ids_density</key>
+		<dict>
+</dict>
+
+		<key>tags</key>
+		<dict>
+</dict>
+
+		<key>tags_density</key>
+		<dict>
+</dict>
+
+	</dict>
+</plist>
+Starting Xcode compile with the following arguments:
+
+    xcodebuild
+    -target
+    ci.linkedIn-universal
+    -configuration
+    Debug
+    -sdk
+    iphonesimulator4.3
+    GCC_PREPROCESSOR_DEFINITIONS=__LOG__ID__=7126a304-bda0-46d0-8cbd-dc1787aff298 DEPLOYTYPE=development TI_DEVELOPMENT=1 DEBUG=1 TI_VERSION=1.7.2 DEBUGGER_ENABLED=1
+    IPHONEOS_DEPLOYMENT_TARGET=3.1
+    TARGETED_DEVICE_FAMILY=1,2
+    VALID_ARCHS=armv6 armv7 i386
+
+app_id = ci.linkedIn
+
+
+2011-10-13 03:29:46.219 xcodebuild[13433:80b] WARNING: skipping plug-in at path '/Library/Application Support/Developer/Shared/Xcode/Plug-ins/GTM Xcode Plugin.xcplugin' because it is not compatible with this version of Xcode.
+Build settings from command line:
+    GCC_PREPROCESSOR_DEFINITIONS = __LOG__ID__=7126a304-bda0-46d0-8cbd-dc1787aff298 DEPLOYTYPE=development TI_DEVELOPMENT=1 DEBUG=1 TI_VERSION=1.7.2 DEBUGGER_ENABLED=1
+    IPHONEOS_DEPLOYMENT_TARGET = 3.1
+    SDKROOT = iphonesimulator4.3
+    TARGETED_DEVICE_FAMILY = 1,2
+    VALID_ARCHS = armv6 armv7 i386
+
+=== BUILD NATIVE TARGET ci.linkedIn-universal OF PROJECT ci.linkedIn WITH CONFIGURATION Debug ===
+Check dependencies
+
+ProcessInfoPlistFile build/Debug-iphonesimulator/ci.linkedIn.app/Info.plist Info.plist
+    cd /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone
+    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"
+    builtin-infoPlistUtility Info.plist -genpkginfo /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator/ci.linkedIn.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator/ci.linkedIn.app/Info.plist
+
+CopyPlistFile build/Debug-iphonesimulator/ci.linkedIn.app/stylesheet.plist Resources/stylesheet.plist
+    cd /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone
+    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"
+    builtin-copyPlist --convert binary1 --outdir /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator/ci.linkedIn.app -- Resources/stylesheet.plist
+
+CopyPlistFile build/Debug-iphonesimulator/ci.linkedIn.app/debugger.plist Resources/debugger.plist
+    cd /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone
+    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"
+    builtin-copyPlist --convert binary1 --outdir /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator/ci.linkedIn.app -- Resources/debugger.plist
+
+PhaseScriptExecution Pre-Compile build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/Script-DABB369F12E8CB280026A6EA.sh
+    cd /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone
+    setenv ACTION build
+    setenv ALTERNATE_GROUP staff
+    setenv ALTERNATE_MODE u+w,go-w,a+rX
+    setenv ALTERNATE_OWNER aaronksaunders
+    setenv ALWAYS_SEARCH_USER_PATHS NO
+    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer
+    setenv APPLE_INTERNAL_DIR /AppleInternal
+    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation
+    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library
+    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools
+    setenv APPLY_RULES_IN_COPY_FILES NO
+    setenv ARCHS i386
+    setenv ARCHS_STANDARD_32_BIT i386
+    setenv ARCHS_UNIVERSAL_IPHONE_OS i386
+    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"
+    setenv BUILD_COMPONENTS "headers build"
+    setenv BUILD_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build
+    setenv BUILD_ROOT /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build
+    setenv BUILD_STYLE Debug
+    setenv BUILD_VARIANTS normal
+    setenv BUILT_PRODUCTS_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator
+    setenv CACHE_ROOT /var/folders/Jn/Jn3JLzodGeurwoJZYN1BW++++TI/-Caches-/com.apple.Xcode.501
+    setenv CCHROOT /var/folders/Jn/Jn3JLzodGeurwoJZYN1BW++++TI/-Caches-/com.apple.Xcode.501
+    setenv CHMOD /bin/chmod
+    setenv CHOWN /usr/sbin/chown
+    setenv CLASS_FILE_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/JavaClasses
+    setenv CLEAN_PRECOMPS YES
+    setenv CLONE_HEADERS NO
+    setenv CODESIGNING_FOLDER_PATH /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator/ci.linkedIn.app
+    setenv CODE_SIGN_IDENTITY "iPhone Developer"
+    setenv COMBINE_HIDPI_IMAGES NO
+    setenv COMMAND_MODE legacy
+    setenv COMPOSITE_SDK_DIRS /var/folders/Jn/Jn3JLzodGeurwoJZYN1BW++++TI/-Caches-/com.apple.Xcode.501/CompositeSDKs
+    setenv COMPRESS_PNG_FILES YES
+    setenv CONFIGURATION Debug
+    setenv CONFIGURATION_BUILD_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator
+    setenv CONFIGURATION_TEMP_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator
+    setenv CONTENTS_FOLDER_PATH ci.linkedIn.app
+    setenv COPYING_PRESERVES_HFS_DATA NO
+    setenv COPY_PHASE_STRIP NO
+    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES
+    setenv CP /bin/cp
+    setenv CURRENT_ARCH i386
+    setenv CURRENT_VARIANT normal
+    setenv DEAD_CODE_STRIPPING NO
+    setenv DEBUGGING_SYMBOLS YES
+    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym
+    setenv DEPLOYMENT_LOCATION NO
+    setenv DEPLOYMENT_POSTPROCESSING NO
+    setenv DERIVED_FILES_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/DerivedSources
+    setenv DERIVED_FILE_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/DerivedSources
+    setenv DERIVED_SOURCES_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/DerivedSources
+    setenv DEVELOPER_APPLICATIONS_DIR /Developer/Applications
+    setenv DEVELOPER_BIN_DIR /Developer/usr/bin
+    setenv DEVELOPER_DIR /Developer
+    setenv DEVELOPER_FRAMEWORKS_DIR /Developer/Library/Frameworks
+    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Developer/Library/Frameworks\""
+    setenv DEVELOPER_LIBRARY_DIR /Developer/Library
+    setenv DEVELOPER_SDK_DIR /Developer/SDKs
+    setenv DEVELOPER_TOOLS_DIR /Developer/Tools
+    setenv DEVELOPER_USR_DIR /Developer/usr
+    setenv DEVELOPMENT_LANGUAGE English
+    setenv DOCUMENTATION_FOLDER_PATH ci.linkedIn.app/English.lproj/Documentation
+    setenv DO_HEADER_SCANNING_IN_JAM NO
+    setenv DSTROOT /tmp/ci.linkedIn.dst
+    setenv DWARF_DSYM_FILE_NAME ci.linkedIn.app.dSYM
+    setenv DWARF_DSYM_FOLDER_PATH /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator
+    setenv EFFECTIVE_PLATFORM_NAME -iphonesimulator
+    setenv ENABLE_HEADER_DEPENDENCIES YES
+    setenv ENABLE_OPENMP_SUPPORT NO
+    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".svn CVS"
+    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) CVS .svn .git *.xcodeproj *.xcode *.pbproj *.pbxproj"
+    setenv EXECUTABLES_FOLDER_PATH ci.linkedIn.app/Executables
+    setenv EXECUTABLE_FOLDER_PATH ci.linkedIn.app
+    setenv EXECUTABLE_NAME ci.linkedIn
+    setenv EXECUTABLE_PATH ci.linkedIn.app/ci.linkedIn
+    setenv FILE_LIST /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/Objects/LinkFileList
+    setenv FIXED_FILES_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/FixedFiles
+    setenv FRAMEWORKS_FOLDER_PATH ci.linkedIn.app/Frameworks
+    setenv FRAMEWORK_FLAG_PREFIX -framework
+    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator\" "
+    setenv FRAMEWORK_VERSION A
+    setenv FULL_PRODUCT_NAME ci.linkedIn.app
+    setenv GCC3_VERSION 3.3
+    setenv GCC_C_LANGUAGE_STANDARD c99
+    setenv GCC_DYNAMIC_NO_PIC NO
+    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES
+    setenv GCC_OBJC_LEGACY_DISPATCH YES
+    setenv GCC_OPTIMIZATION_LEVEL 0
+    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"
+    setenv GCC_PRECOMPILE_PREFIX_HEADER YES
+    setenv GCC_PREFIX_HEADER ci.linkedIn_Prefix.pch
+    setenv GCC_PREPROCESSOR_DEFINITIONS "__LOG__ID__=7126a304-bda0-46d0-8cbd-dc1787aff298 DEPLOYTYPE=development TI_DEVELOPMENT=1 DEBUG=1 TI_VERSION=1.7.2 DEBUGGER_ENABLED=1"
+    setenv GCC_SYMBOLS_PRIVATE_EXTERN YES
+    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO
+    setenv GCC_VERSION com.apple.compilers.llvmgcc42
+    setenv GCC_WARN_ABOUT_RETURN_TYPE NO
+    setenv GCC_WARN_MISSING_PARENTHESES NO
+    setenv GCC_WARN_SHADOW NO
+    setenv GCC_WARN_STRICT_SELECTOR_MATCH NO
+    setenv GCC_WARN_UNUSED_FUNCTION YES
+    setenv GCC_WARN_UNUSED_PARAMETER NO
+    setenv GCC_WARN_UNUSED_VALUE NO
+    setenv GCC_WARN_UNUSED_VARIABLE NO
+    setenv GENERATE_MASTER_OBJECT_FILE NO
+    setenv GENERATE_PKGINFO_FILE YES
+    setenv GENERATE_PROFILING_CODE NO
+    setenv GID 20
+    setenv GROUP staff
+    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES
+    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES
+    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES
+    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES
+    setenv HEADER_SEARCH_PATHS "\"/Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator/include\" /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 headers"
+    setenv ICONV /usr/bin/iconv
+    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES
+    setenv INFOPLIST_FILE Info.plist
+    setenv INFOPLIST_OUTPUT_FORMAT binary
+    setenv INFOPLIST_PATH ci.linkedIn.app/Info.plist
+    setenv INFOPLIST_PREPROCESS NO
+    setenv INFOSTRINGS_PATH ci.linkedIn.app/English.lproj/InfoPlist.strings
+    setenv INSTALL_DIR /tmp/ci.linkedIn.dst/Applications
+    setenv INSTALL_GROUP staff
+    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX
+    setenv INSTALL_OWNER aaronksaunders
+    setenv INSTALL_PATH /Applications
+    setenv INSTALL_ROOT /tmp/ci.linkedIn.dst
+    setenv IPHONEOS_DEPLOYMENT_TARGET 3.1
+    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"
+    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub
+    setenv JAVA_ARCHIVE_CLASSES YES
+    setenv JAVA_ARCHIVE_TYPE JAR
+    setenv JAVA_COMPILER /usr/bin/javac
+    setenv JAVA_FOLDER_PATH ci.linkedIn.app/Java
+    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources
+    setenv JAVA_JAR_FLAGS cv
+    setenv JAVA_SOURCE_SUBDIR .
+    setenv JAVA_USE_DEPENDENCIES YES
+    setenv JAVA_ZIP_FLAGS -urg
+    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"
+    setenv KEEP_PRIVATE_EXTERNS NO
+    setenv LD_GENERATE_MAP_FILE NO
+    setenv LD_MAP_FILE_PATH /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/ci.linkedIn-LinkMap-normal-i386.txt
+    setenv LD_OPENMP_FLAGS -fopenmp
+    setenv LEGACY_DEVELOPER_DIR /Developer/Library/Xcode/PrivatePlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer
+    setenv LEX /Developer/usr/bin/lex
+    setenv LIBRARY_FLAG_NOSPACE YES
+    setenv LIBRARY_FLAG_PREFIX -l
+    setenv LIBRARY_SEARCH_PATHS "\"/Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator\"  \"/Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/lib\" \"/Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/../../../../tmp/staticlib/build/Debug-iphonesimulator\" \"/Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/../../../tijs/TiCore/TiCore/build/Release-iphonesimulator\""
+    setenv LINKER_DISPLAYS_MANGLED_NAMES NO
+    setenv LINK_FILE_LIST_normal_i386 /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/Objects-normal/i386/ci.linkedIn.LinkFileList
+    setenv LINK_WITH_STANDARD_LIBRARIES YES
+    setenv LOCALIZED_RESOURCES_FOLDER_PATH ci.linkedIn.app/English.lproj
+    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities
+    setenv LOCAL_APPS_DIR /Applications
+    setenv LOCAL_DEVELOPER_DIR /Library/Developer
+    setenv LOCAL_LIBRARY_DIR /Library
+    setenv MACH_O_TYPE mh_execute
+    setenv MACOSX_DEPLOYMENT_TARGET 10.6
+    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 10K549
+    setenv MAC_OS_X_VERSION_ACTUAL 1068
+    setenv MAC_OS_X_VERSION_MAJOR 1060
+    setenv MAC_OS_X_VERSION_MINOR 0608
+    setenv NATIVE_ARCH i386
+    setenv NATIVE_ARCH_32_BIT i386
+    setenv NATIVE_ARCH_64_BIT x86_64
+    setenv NATIVE_ARCH_ACTUAL x86_64
+    setenv NO_COMMON YES
+    setenv OBJC_ABI_VERSION 2
+    setenv OBJECT_FILE_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/Objects
+    setenv OBJECT_FILE_DIR_normal /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/Objects-normal
+    setenv OBJROOT /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build
+    setenv ONLY_ACTIVE_ARCH NO
+    setenv OPTIMIZATION_LEVEL 0
+    setenv OS MACOS
+    setenv OSAC /usr/bin/osacompile
+    setenv OTHER_CFLAGS "-DIPAD -DTI_POST_1_2 -DDEBUG"
+    setenv OTHER_CPLUSPLUSFLAGS "-DIPAD -DTI_POST_1_2 -DDEBUG"
+    setenv OTHER_LDFLAGS "-ObjC -weak_framework iAd"
+    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application
+    setenv PASCAL_STRINGS YES
+    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"
+    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Developer/Headers /Developer/SDKs /Developer/Platforms"
+    setenv PBDEVELOPMENTPLIST_PATH ci.linkedIn.app/pbdevelopment.plist
+    setenv PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"
+    setenv PHONEGAPLIB /Users/aaronksaunders/Documents/PhoneGapLib
+    setenv PKGINFO_FILE_PATH /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/PkgInfo
+    setenv PKGINFO_PATH ci.linkedIn.app/PkgInfo
+    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Applications
+    setenv PLATFORM_DEVELOPER_BIN_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin
+    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Developer/Library/Xcode/PrivatePlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library
+    setenv PLATFORM_DEVELOPER_SDK_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs
+    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Tools
+    setenv PLATFORM_DEVELOPER_USR_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/usr
+    setenv PLATFORM_DIR /Developer/Platforms/iPhoneSimulator.platform
+    setenv PLATFORM_NAME iphonesimulator
+    setenv PLATFORM_PREFERRED_ARCH i386
+    setenv PLATFORM_PRODUCT_BUILD_VERSION 8H7
+    setenv PLATFORM_VERSION_AVAILABILITY_H_FORMAT 40300
+    setenv PLIST_FILE_OUTPUT_FORMAT binary
+    setenv PLUGINS_FOLDER_PATH ci.linkedIn.app/PlugIns
+    setenv PREBINDING NO
+    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES
+    setenv PRECOMP_DESTINATION_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/PrefixHeaders
+    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO
+    setenv PRIVATE_HEADERS_FOLDER_PATH ci.linkedIn.app/PrivateHeaders
+    setenv PRODUCT_NAME ci.linkedIn
+    setenv PRODUCT_SETTINGS_PATH /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/Info.plist
+    setenv PRODUCT_TYPE com.apple.product-type.application
+    setenv PROFILING_CODE NO
+    setenv PROJECT ci.linkedIn
+    setenv PROJECT_DERIVED_FILE_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/DerivedSources
+    setenv PROJECT_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone
+    setenv PROJECT_FILE_PATH /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/ci.linkedIn.xcodeproj
+    setenv PROJECT_NAME ci.linkedIn
+    setenv PROJECT_TEMP_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build
+    setenv PUBLIC_HEADERS_FOLDER_PATH ci.linkedIn.app/Headers
+    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES
+    setenv REMOVE_CVS_FROM_RESOURCES YES
+    setenv REMOVE_GIT_FROM_RESOURCES YES
+    setenv REMOVE_SVN_FROM_RESOURCES YES
+    setenv REZ_COLLECTOR_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/ResourceManagerResources
+    setenv REZ_OBJECTS_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/ResourceManagerResources/Objects
+    setenv REZ_SEARCH_PATHS "\"/Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator\" "
+    setenv RUN_CLANG_STATIC_ANALYZER NO
+    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO
+    setenv SCRIPTS_FOLDER_PATH ci.linkedIn.app/Scripts
+    setenv SCRIPT_INPUT_FILE_COUNT 0
+    setenv SCRIPT_OUTPUT_FILE_COUNT 0
+    setenv SDKROOT /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
+    setenv SDK_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
+    setenv SDK_NAME iphonesimulator4.3
+    setenv SDK_PRODUCT_BUILD_VERSION 8H7
+    setenv SED /usr/bin/sed
+    setenv SEPARATE_STRIP NO
+    setenv SEPARATE_SYMBOL_EDIT NO
+    setenv SET_DIR_MODE_OWNER_GROUP YES
+    setenv SET_FILE_MODE_OWNER_GROUP NO
+    setenv SHALLOW_BUNDLE YES
+    setenv SHARED_DERIVED_FILE_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator/DerivedSources
+    setenv SHARED_FRAMEWORKS_FOLDER_PATH ci.linkedIn.app/SharedFrameworks
+    setenv SHARED_PRECOMPS_DIR /var/folders/Jn/Jn3JLzodGeurwoJZYN1BW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders
+    setenv SHARED_SUPPORT_FOLDER_PATH ci.linkedIn.app/SharedSupport
+    setenv SKIP_INSTALL NO
+    setenv SOURCE_ROOT /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone
+    setenv SRCROOT /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone
+    setenv STANDARD_C_PLUS_PLUS_LIBRARY_TYPE dynamic
+    setenv STRINGS_FILE_OUTPUT_ENCODING binary
+    setenv STRIP_INSTALLED_PRODUCT YES
+    setenv STRIP_STYLE all
+    setenv SUPPORTED_DEVICE_FAMILIES "1 2"
+    setenv SUPPORTED_PLATFORMS "iphonesimulator iphoneos"
+    setenv SYMBOL_REPOSITORY_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/SymbolRepositories
+    setenv SYMROOT /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build
+    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities
+    setenv SYSTEM_APPS_DIR /Applications
+    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices
+    setenv SYSTEM_DEMOS_DIR /Applications/Extras
+    setenv SYSTEM_DEVELOPER_APPS_DIR /Developer/Applications
+    setenv SYSTEM_DEVELOPER_BIN_DIR /Developer/usr/bin
+    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Developer/Applications/Utilities/Built Examples"
+    setenv SYSTEM_DEVELOPER_DIR /Developer
+    setenv SYSTEM_DEVELOPER_DOC_DIR "/Developer/ADC Reference Library"
+    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Developer/Applications/Graphics Tools"
+    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Developer/Applications/Java Tools"
+    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Developer/Applications/Performance Tools"
+    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes"
+    setenv SYSTEM_DEVELOPER_TOOLS /Developer/Tools
+    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Developer/ADC Reference Library/documentation/DeveloperTools"
+    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes/DeveloperTools"
+    setenv SYSTEM_DEVELOPER_USR_DIR /Developer/usr
+    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Developer/Applications/Utilities
+    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation
+    setenv SYSTEM_LIBRARY_DIR /System/Library
+    setenv TARGETED_DEVICE_FAMILY 1,2
+    setenv TARGETNAME ci.linkedIn-universal
+    setenv TARGET_BUILD_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator
+    setenv TARGET_NAME ci.linkedIn-universal
+    setenv TARGET_TEMP_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build
+    setenv TEMP_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build
+    setenv TEMP_FILES_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build
+    setenv TEMP_FILE_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build
+    setenv TEMP_ROOT /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build
+    setenv TEST_AFTER_BUILD YES
+    setenv TI_APPID ci.linkedIn
+    setenv TI_SDK_DIR "/Library/Application Support/Titanium/mobilesdk/osx/1.7.2/iphone"
+    setenv TI_VERSION 1.7.2
+    setenv UID 501
+    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH ci.linkedIn.app
+    setenv UNSTRIPPED_PRODUCT NO
+    setenv USER aaronksaunders
+    setenv USER_APPS_DIR /Users/aaronksaunders/Applications
+    setenv USER_LIBRARY_DIR /Users/aaronksaunders/Library
+    setenv USE_DYNAMIC_NO_PIC YES
+    setenv USE_HEADERMAP YES
+    setenv USE_HEADER_SYMLINKS NO
+    setenv VALIDATE_PRODUCT NO
+    setenv VALID_ARCHS "armv6 armv7 i386"
+    setenv VERBOSE_PBXCP NO
+    setenv VERSIONPLIST_PATH ci.linkedIn.app/version.plist
+    setenv VERSION_INFO_BUILDER aaronksaunders
+    setenv VERSION_INFO_FILE ci.linkedIn_vers.c
+    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:ci.linkedIn  PROJECT:ci.linkedIn-\""
+    setenv WRAPPER_EXTENSION app
+    setenv WRAPPER_NAME ci.linkedIn.app
+    setenv WRAPPER_SUFFIX .app
+    setenv XCODE_APP_SUPPORT_DIR /Developer/Library/Xcode
+    setenv XCODE_PRODUCT_BUILD_VERSION 4A2002a
+    setenv XCODE_VERSION_ACTUAL 0402
+    setenv XCODE_VERSION_MAJOR 0400
+    setenv XCODE_VERSION_MINOR 0400
+    setenv YACC /Developer/usr/bin/yacc
+    /bin/sh -c /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/Script-DABB369F12E8CB280026A6EA.sh
+[INFO] One moment, building ...
+[DEBUG] Detecting modules in /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/modules
+[DEBUG] Detecting modules in /Library/Application Support/Titanium/modules
+[INFO] Titanium SDK version: 1.7.2
+[INFO] iPhone Device family: universal
+[INFO] iPhone SDK version: 4.3
+[DEBUG] copy resources from /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/Resources/iphone to /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator/ci.linkedIn.app
+[INFO] Skipping JS compile, running from simulator
+
+PhaseScriptExecution Post-Compile build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/Script-DABB37B812E8CB280026A6EA.sh
+    cd /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone
+    setenv ACTION build
+    setenv ALTERNATE_GROUP staff
+    setenv ALTERNATE_MODE u+w,go-w,a+rX
+    setenv ALTERNATE_OWNER aaronksaunders
+    setenv ALWAYS_SEARCH_USER_PATHS NO
+    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer
+    setenv APPLE_INTERNAL_DIR /AppleInternal
+    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation
+    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library
+    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools
+    setenv APPLY_RULES_IN_COPY_FILES NO
+    setenv ARCHS i386
+    setenv ARCHS_STANDARD_32_BIT i386
+    setenv ARCHS_UNIVERSAL_IPHONE_OS i386
+    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"
+    setenv BUILD_COMPONENTS "headers build"
+    setenv BUILD_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build
+    setenv BUILD_ROOT /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build
+    setenv BUILD_STYLE Debug
+    setenv BUILD_VARIANTS normal
+    setenv BUILT_PRODUCTS_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator
+    setenv CACHE_ROOT /var/folders/Jn/Jn3JLzodGeurwoJZYN1BW++++TI/-Caches-/com.apple.Xcode.501
+    setenv CCHROOT /var/folders/Jn/Jn3JLzodGeurwoJZYN1BW++++TI/-Caches-/com.apple.Xcode.501
+    setenv CHMOD /bin/chmod
+    setenv CHOWN /usr/sbin/chown
+    setenv CLASS_FILE_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/JavaClasses
+    setenv CLEAN_PRECOMPS YES
+    setenv CLONE_HEADERS NO
+    setenv CODESIGNING_FOLDER_PATH /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator/ci.linkedIn.app
+    setenv CODE_SIGN_IDENTITY "iPhone Developer"
+    setenv COMBINE_HIDPI_IMAGES NO
+    setenv COMMAND_MODE legacy
+    setenv COMPOSITE_SDK_DIRS /var/folders/Jn/Jn3JLzodGeurwoJZYN1BW++++TI/-Caches-/com.apple.Xcode.501/CompositeSDKs
+    setenv COMPRESS_PNG_FILES YES
+    setenv CONFIGURATION Debug
+    setenv CONFIGURATION_BUILD_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator
+    setenv CONFIGURATION_TEMP_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator
+    setenv CONTENTS_FOLDER_PATH ci.linkedIn.app
+    setenv COPYING_PRESERVES_HFS_DATA NO
+    setenv COPY_PHASE_STRIP NO
+    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES
+    setenv CP /bin/cp
+    setenv CURRENT_ARCH i386
+    setenv CURRENT_VARIANT normal
+    setenv DEAD_CODE_STRIPPING NO
+    setenv DEBUGGING_SYMBOLS YES
+    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym
+    setenv DEPLOYMENT_LOCATION NO
+    setenv DEPLOYMENT_POSTPROCESSING NO
+    setenv DERIVED_FILES_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/DerivedSources
+    setenv DERIVED_FILE_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/DerivedSources
+    setenv DERIVED_SOURCES_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/DerivedSources
+    setenv DEVELOPER_APPLICATIONS_DIR /Developer/Applications
+    setenv DEVELOPER_BIN_DIR /Developer/usr/bin
+    setenv DEVELOPER_DIR /Developer
+    setenv DEVELOPER_FRAMEWORKS_DIR /Developer/Library/Frameworks
+    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Developer/Library/Frameworks\""
+    setenv DEVELOPER_LIBRARY_DIR /Developer/Library
+    setenv DEVELOPER_SDK_DIR /Developer/SDKs
+    setenv DEVELOPER_TOOLS_DIR /Developer/Tools
+    setenv DEVELOPER_USR_DIR /Developer/usr
+    setenv DEVELOPMENT_LANGUAGE English
+    setenv DOCUMENTATION_FOLDER_PATH ci.linkedIn.app/English.lproj/Documentation
+    setenv DO_HEADER_SCANNING_IN_JAM NO
+    setenv DSTROOT /tmp/ci.linkedIn.dst
+    setenv DWARF_DSYM_FILE_NAME ci.linkedIn.app.dSYM
+    setenv DWARF_DSYM_FOLDER_PATH /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator
+    setenv EFFECTIVE_PLATFORM_NAME -iphonesimulator
+    setenv ENABLE_HEADER_DEPENDENCIES YES
+    setenv ENABLE_OPENMP_SUPPORT NO
+    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".svn CVS"
+    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) CVS .svn .git *.xcodeproj *.xcode *.pbproj *.pbxproj"
+    setenv EXECUTABLES_FOLDER_PATH ci.linkedIn.app/Executables
+    setenv EXECUTABLE_FOLDER_PATH ci.linkedIn.app
+    setenv EXECUTABLE_NAME ci.linkedIn
+    setenv EXECUTABLE_PATH ci.linkedIn.app/ci.linkedIn
+    setenv FILE_LIST /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/Objects/LinkFileList
+    setenv FIXED_FILES_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/FixedFiles
+    setenv FRAMEWORKS_FOLDER_PATH ci.linkedIn.app/Frameworks
+    setenv FRAMEWORK_FLAG_PREFIX -framework
+    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator\" "
+    setenv FRAMEWORK_VERSION A
+    setenv FULL_PRODUCT_NAME ci.linkedIn.app
+    setenv GCC3_VERSION 3.3
+    setenv GCC_C_LANGUAGE_STANDARD c99
+    setenv GCC_DYNAMIC_NO_PIC NO
+    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES
+    setenv GCC_OBJC_LEGACY_DISPATCH YES
+    setenv GCC_OPTIMIZATION_LEVEL 0
+    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"
+    setenv GCC_PRECOMPILE_PREFIX_HEADER YES
+    setenv GCC_PREFIX_HEADER ci.linkedIn_Prefix.pch
+    setenv GCC_PREPROCESSOR_DEFINITIONS "__LOG__ID__=7126a304-bda0-46d0-8cbd-dc1787aff298 DEPLOYTYPE=development TI_DEVELOPMENT=1 DEBUG=1 TI_VERSION=1.7.2 DEBUGGER_ENABLED=1"
+    setenv GCC_SYMBOLS_PRIVATE_EXTERN YES
+    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO
+    setenv GCC_VERSION com.apple.compilers.llvmgcc42
+    setenv GCC_WARN_ABOUT_RETURN_TYPE NO
+    setenv GCC_WARN_MISSING_PARENTHESES NO
+    setenv GCC_WARN_SHADOW NO
+    setenv GCC_WARN_STRICT_SELECTOR_MATCH NO
+    setenv GCC_WARN_UNUSED_FUNCTION YES
+    setenv GCC_WARN_UNUSED_PARAMETER NO
+    setenv GCC_WARN_UNUSED_VALUE NO
+    setenv GCC_WARN_UNUSED_VARIABLE NO
+    setenv GENERATE_MASTER_OBJECT_FILE NO
+    setenv GENERATE_PKGINFO_FILE YES
+    setenv GENERATE_PROFILING_CODE NO
+    setenv GID 20
+    setenv GROUP staff
+    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES
+    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES
+    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES
+    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES
+    setenv HEADER_SEARCH_PATHS "\"/Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator/include\" /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 headers"
+    setenv ICONV /usr/bin/iconv
+    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES
+    setenv INFOPLIST_FILE Info.plist
+    setenv INFOPLIST_OUTPUT_FORMAT binary
+    setenv INFOPLIST_PATH ci.linkedIn.app/Info.plist
+    setenv INFOPLIST_PREPROCESS NO
+    setenv INFOSTRINGS_PATH ci.linkedIn.app/English.lproj/InfoPlist.strings
+    setenv INSTALL_DIR /tmp/ci.linkedIn.dst/Applications
+    setenv INSTALL_GROUP staff
+    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX
+    setenv INSTALL_OWNER aaronksaunders
+    setenv INSTALL_PATH /Applications
+    setenv INSTALL_ROOT /tmp/ci.linkedIn.dst
+    setenv IPHONEOS_DEPLOYMENT_TARGET 3.1
+    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"
+    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub
+    setenv JAVA_ARCHIVE_CLASSES YES
+    setenv JAVA_ARCHIVE_TYPE JAR
+    setenv JAVA_COMPILER /usr/bin/javac
+    setenv JAVA_FOLDER_PATH ci.linkedIn.app/Java
+    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources
+    setenv JAVA_JAR_FLAGS cv
+    setenv JAVA_SOURCE_SUBDIR .
+    setenv JAVA_USE_DEPENDENCIES YES
+    setenv JAVA_ZIP_FLAGS -urg
+    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"
+    setenv KEEP_PRIVATE_EXTERNS NO
+    setenv LD_GENERATE_MAP_FILE NO
+    setenv LD_MAP_FILE_PATH /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/ci.linkedIn-LinkMap-normal-i386.txt
+    setenv LD_OPENMP_FLAGS -fopenmp
+    setenv LEGACY_DEVELOPER_DIR /Developer/Library/Xcode/PrivatePlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer
+    setenv LEX /Developer/usr/bin/lex
+    setenv LIBRARY_FLAG_NOSPACE YES
+    setenv LIBRARY_FLAG_PREFIX -l
+    setenv LIBRARY_SEARCH_PATHS "\"/Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator\"  \"/Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/lib\" \"/Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/../../../../tmp/staticlib/build/Debug-iphonesimulator\" \"/Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/../../../tijs/TiCore/TiCore/build/Release-iphonesimulator\""
+    setenv LINKER_DISPLAYS_MANGLED_NAMES NO
+    setenv LINK_FILE_LIST_normal_i386 /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/Objects-normal/i386/ci.linkedIn.LinkFileList
+    setenv LINK_WITH_STANDARD_LIBRARIES YES
+    setenv LOCALIZED_RESOURCES_FOLDER_PATH ci.linkedIn.app/English.lproj
+    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities
+    setenv LOCAL_APPS_DIR /Applications
+    setenv LOCAL_DEVELOPER_DIR /Library/Developer
+    setenv LOCAL_LIBRARY_DIR /Library
+    setenv MACH_O_TYPE mh_execute
+    setenv MACOSX_DEPLOYMENT_TARGET 10.6
+    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 10K549
+    setenv MAC_OS_X_VERSION_ACTUAL 1068
+    setenv MAC_OS_X_VERSION_MAJOR 1060
+    setenv MAC_OS_X_VERSION_MINOR 0608
+    setenv NATIVE_ARCH i386
+    setenv NATIVE_ARCH_32_BIT i386
+    setenv NATIVE_ARCH_64_BIT x86_64
+    setenv NATIVE_ARCH_ACTUAL x86_64
+    setenv NO_COMMON YES
+    setenv OBJC_ABI_VERSION 2
+    setenv OBJECT_FILE_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/Objects
+    setenv OBJECT_FILE_DIR_normal /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/Objects-normal
+    setenv OBJROOT /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build
+    setenv ONLY_ACTIVE_ARCH NO
+    setenv OPTIMIZATION_LEVEL 0
+    setenv OS MACOS
+    setenv OSAC /usr/bin/osacompile
+    setenv OTHER_CFLAGS "-DIPAD -DTI_POST_1_2 -DDEBUG"
+    setenv OTHER_CPLUSPLUSFLAGS "-DIPAD -DTI_POST_1_2 -DDEBUG"
+    setenv OTHER_LDFLAGS "-ObjC -weak_framework iAd"
+    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application
+    setenv PASCAL_STRINGS YES
+    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"
+    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Developer/Headers /Developer/SDKs /Developer/Platforms"
+    setenv PBDEVELOPMENTPLIST_PATH ci.linkedIn.app/pbdevelopment.plist
+    setenv PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"
+    setenv PHONEGAPLIB /Users/aaronksaunders/Documents/PhoneGapLib
+    setenv PKGINFO_FILE_PATH /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/PkgInfo
+    setenv PKGINFO_PATH ci.linkedIn.app/PkgInfo
+    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Applications
+    setenv PLATFORM_DEVELOPER_BIN_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin
+    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Developer/Library/Xcode/PrivatePlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library
+    setenv PLATFORM_DEVELOPER_SDK_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs
+    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Tools
+    setenv PLATFORM_DEVELOPER_USR_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/usr
+    setenv PLATFORM_DIR /Developer/Platforms/iPhoneSimulator.platform
+    setenv PLATFORM_NAME iphonesimulator
+    setenv PLATFORM_PREFERRED_ARCH i386
+    setenv PLATFORM_PRODUCT_BUILD_VERSION 8H7
+    setenv PLATFORM_VERSION_AVAILABILITY_H_FORMAT 40300
+    setenv PLIST_FILE_OUTPUT_FORMAT binary
+    setenv PLUGINS_FOLDER_PATH ci.linkedIn.app/PlugIns
+    setenv PREBINDING NO
+    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES
+    setenv PRECOMP_DESTINATION_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/PrefixHeaders
+    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO
+    setenv PRIVATE_HEADERS_FOLDER_PATH ci.linkedIn.app/PrivateHeaders
+    setenv PRODUCT_NAME ci.linkedIn
+    setenv PRODUCT_SETTINGS_PATH /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/Info.plist
+    setenv PRODUCT_TYPE com.apple.product-type.application
+    setenv PROFILING_CODE NO
+    setenv PROJECT ci.linkedIn
+    setenv PROJECT_DERIVED_FILE_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/DerivedSources
+    setenv PROJECT_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone
+    setenv PROJECT_FILE_PATH /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/ci.linkedIn.xcodeproj
+    setenv PROJECT_NAME ci.linkedIn
+    setenv PROJECT_TEMP_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build
+    setenv PUBLIC_HEADERS_FOLDER_PATH ci.linkedIn.app/Headers
+    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES
+    setenv REMOVE_CVS_FROM_RESOURCES YES
+    setenv REMOVE_GIT_FROM_RESOURCES YES
+    setenv REMOVE_SVN_FROM_RESOURCES YES
+    setenv REZ_COLLECTOR_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/ResourceManagerResources
+    setenv REZ_OBJECTS_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/ResourceManagerResources/Objects
+    setenv REZ_SEARCH_PATHS "\"/Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator\" "
+    setenv RUN_CLANG_STATIC_ANALYZER NO
+    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO
+    setenv SCRIPTS_FOLDER_PATH ci.linkedIn.app/Scripts
+    setenv SCRIPT_INPUT_FILE_COUNT 0
+    setenv SCRIPT_OUTPUT_FILE_COUNT 0
+    setenv SDKROOT /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
+    setenv SDK_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
+    setenv SDK_NAME iphonesimulator4.3
+    setenv SDK_PRODUCT_BUILD_VERSION 8H7
+    setenv SED /usr/bin/sed
+    setenv SEPARATE_STRIP NO
+    setenv SEPARATE_SYMBOL_EDIT NO
+    setenv SET_DIR_MODE_OWNER_GROUP YES
+    setenv SET_FILE_MODE_OWNER_GROUP NO
+    setenv SHALLOW_BUNDLE YES
+    setenv SHARED_DERIVED_FILE_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator/DerivedSources
+    setenv SHARED_FRAMEWORKS_FOLDER_PATH ci.linkedIn.app/SharedFrameworks
+    setenv SHARED_PRECOMPS_DIR /var/folders/Jn/Jn3JLzodGeurwoJZYN1BW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders
+    setenv SHARED_SUPPORT_FOLDER_PATH ci.linkedIn.app/SharedSupport
+    setenv SKIP_INSTALL NO
+    setenv SOURCE_ROOT /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone
+    setenv SRCROOT /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone
+    setenv STANDARD_C_PLUS_PLUS_LIBRARY_TYPE dynamic
+    setenv STRINGS_FILE_OUTPUT_ENCODING binary
+    setenv STRIP_INSTALLED_PRODUCT YES
+    setenv STRIP_STYLE all
+    setenv SUPPORTED_DEVICE_FAMILIES "1 2"
+    setenv SUPPORTED_PLATFORMS "iphonesimulator iphoneos"
+    setenv SYMBOL_REPOSITORY_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/SymbolRepositories
+    setenv SYMROOT /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build
+    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities
+    setenv SYSTEM_APPS_DIR /Applications
+    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices
+    setenv SYSTEM_DEMOS_DIR /Applications/Extras
+    setenv SYSTEM_DEVELOPER_APPS_DIR /Developer/Applications
+    setenv SYSTEM_DEVELOPER_BIN_DIR /Developer/usr/bin
+    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Developer/Applications/Utilities/Built Examples"
+    setenv SYSTEM_DEVELOPER_DIR /Developer
+    setenv SYSTEM_DEVELOPER_DOC_DIR "/Developer/ADC Reference Library"
+    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Developer/Applications/Graphics Tools"
+    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Developer/Applications/Java Tools"
+    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Developer/Applications/Performance Tools"
+    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes"
+    setenv SYSTEM_DEVELOPER_TOOLS /Developer/Tools
+    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Developer/ADC Reference Library/documentation/DeveloperTools"
+    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes/DeveloperTools"
+    setenv SYSTEM_DEVELOPER_USR_DIR /Developer/usr
+    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Developer/Applications/Utilities
+    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation
+    setenv SYSTEM_LIBRARY_DIR /System/Library
+    setenv TARGETED_DEVICE_FAMILY 1,2
+    setenv TARGETNAME ci.linkedIn-universal
+    setenv TARGET_BUILD_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator
+    setenv TARGET_NAME ci.linkedIn-universal
+    setenv TARGET_TEMP_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build
+    setenv TEMP_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build
+    setenv TEMP_FILES_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build
+    setenv TEMP_FILE_DIR /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build
+    setenv TEMP_ROOT /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build
+    setenv TEST_AFTER_BUILD YES
+    setenv TI_APPID ci.linkedIn
+    setenv TI_SDK_DIR "/Library/Application Support/Titanium/mobilesdk/osx/1.7.2/iphone"
+    setenv TI_VERSION 1.7.2
+    setenv UID 501
+    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH ci.linkedIn.app
+    setenv UNSTRIPPED_PRODUCT NO
+    setenv USER aaronksaunders
+    setenv USER_APPS_DIR /Users/aaronksaunders/Applications
+    setenv USER_LIBRARY_DIR /Users/aaronksaunders/Library
+    setenv USE_DYNAMIC_NO_PIC YES
+    setenv USE_HEADERMAP YES
+    setenv USE_HEADER_SYMLINKS NO
+    setenv VALIDATE_PRODUCT NO
+    setenv VALID_ARCHS "armv6 armv7 i386"
+    setenv VERBOSE_PBXCP NO
+    setenv VERSIONPLIST_PATH ci.linkedIn.app/version.plist
+    setenv VERSION_INFO_BUILDER aaronksaunders
+    setenv VERSION_INFO_FILE ci.linkedIn_vers.c
+    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:ci.linkedIn  PROJECT:ci.linkedIn-\""
+    setenv WRAPPER_EXTENSION app
+    setenv WRAPPER_NAME ci.linkedIn.app
+    setenv WRAPPER_SUFFIX .app
+    setenv XCODE_APP_SUPPORT_DIR /Developer/Library/Xcode
+    setenv XCODE_PRODUCT_BUILD_VERSION 4A2002a
+    setenv XCODE_VERSION_ACTUAL 0402
+    setenv XCODE_VERSION_MAJOR 0400
+    setenv XCODE_VERSION_MINOR 0400
+    setenv YACC /Developer/usr/bin/yacc
+    /bin/sh -c /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/ci.linkedIn.build/Debug-iphonesimulator/ci.linkedIn-universal.build/Script-DABB37B812E8CB280026A6EA.sh
+post-compile
+
+Touch build/Debug-iphonesimulator/ci.linkedIn.app
+    cd /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone
+    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"
+    /usr/bin/touch -c /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator/ci.linkedIn.app
+
+
+** BUILD SUCCEEDED **
+
++ Looking for application binary at /Users/aaronksaunders/Documents/Indulus/ci.linkedIn/build/iphone/build/Debug-iphonesimulator/ci.linkedIn.app/ci.linkedIn
+Finishing build
+
+Exception detected in script:
+Traceback (most recent call last):
+  File "/Library/Application Support/Titanium/mobilesdk/osx/1.7.2/iphone/builder.py", line 1264, in main
+    os.waitpid(sim.pid,0)
+  File "/Library/Application Support/Titanium/mobilesdk/osx/1.7.2/iphone/builder.py", line 1206, in handler
+    kill_simulator()
+  File "/Library/Application Support/Titanium/mobilesdk/osx/1.7.2/iphone/builder.py", line 74, in kill_simulator
+    run.run(['/usr/bin/killall',"iPhone Simulator"],True)
+  File "/Library/Application Support/Titanium/mobilesdk/osx/1.7.2/iphone/run.py", line 6, in run
+    sys.stdout.flush()
+IOError: [Errno 32] Broken pipe
