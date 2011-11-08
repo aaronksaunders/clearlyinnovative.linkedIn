@@ -52,7 +52,7 @@ extern "C" {
 	#define KMETHOD_DEBUG MEMORY_DEBUG
 #endif
 
-// in simulator we redefine to format for cilinkedIn Developer console
+// in simulator we redefine to format for cilinkedin Developer console
 
 
 #define TI_INLINE static __inline__
@@ -370,28 +370,28 @@ return map;\
 
  //MUST BE NEGATIVE, as it inhabits the same space as UIBarButtonSystemItem
 enum {
-	UIcilinkedInNativeItemNone = -1, 
-	UIcilinkedInNativeItemSpinner = -2,
-	UIcilinkedInNativeItemProgressBar = -3,
+	UIcilinkedinNativeItemNone = -1, 
+	UIcilinkedinNativeItemSpinner = -2,
+	UIcilinkedinNativeItemProgressBar = -3,
 	
-	UIcilinkedInNativeItemSlider = -4,
-	UIcilinkedInNativeItemSwitch = -5,
-	UIcilinkedInNativeItemMultiButton = -6,
-	UIcilinkedInNativeItemSegmented = -7,
+	UIcilinkedinNativeItemSlider = -4,
+	UIcilinkedinNativeItemSwitch = -5,
+	UIcilinkedinNativeItemMultiButton = -6,
+	UIcilinkedinNativeItemSegmented = -7,
 	
-	UIcilinkedInNativeItemTextView = -8,
-	UIcilinkedInNativeItemTextField = -9,
-	UIcilinkedInNativeItemSearchBar = -10,
+	UIcilinkedinNativeItemTextView = -8,
+	UIcilinkedinNativeItemTextField = -9,
+	UIcilinkedinNativeItemSearchBar = -10,
 	
-	UIcilinkedInNativeItemPicker = -11,
-	UIcilinkedInNativeItemDatePicker = -12,
+	UIcilinkedinNativeItemPicker = -11,
+	UIcilinkedinNativeItemDatePicker = -12,
 	
-	UIcilinkedInNativeItemInfoLight = -13,
-	UIcilinkedInNativeItemInfoDark = -14,
+	UIcilinkedinNativeItemInfoLight = -13,
+	UIcilinkedinNativeItemInfoDark = -14,
 	
-	UIcilinkedInNativeItemDisclosure = -15,
+	UIcilinkedinNativeItemDisclosure = -15,
 	
-	UIcilinkedInNativeItemContactAdd = -16
+	UIcilinkedinNativeItemContactAdd = -16
 };
 
 

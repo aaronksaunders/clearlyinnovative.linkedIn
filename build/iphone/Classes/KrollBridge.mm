@@ -21,7 +21,7 @@
 
 extern BOOL const TI_APPLICATION_ANALYTICS;
 
-@implementation cilinkedInObject
+@implementation cilinkedinObject
 
 -(NSDictionary*)modules
 {
@@ -473,7 +473,7 @@ CFMutableSetRef	krollBridgeRegistry = nil;
 
 -(void)injectPatches
 {
-	// called to inject any cilinkedIn patches in JS before a context is loaded... nice for 
+	// called to inject any cilinkedin patches in JS before a context is loaded... nice for 
 	// setting up backwards compat type APIs
 	
 	NSMutableString *js = [[NSMutableString alloc] init];
@@ -522,9 +522,9 @@ CFMutableSetRef	krollBridgeRegistry = nil;
 
 -(void)didStartNewContext:(KrollContext*)kroll
 {
-	// create cilinkedIn global object
+	// create cilinkedin global object
 	NSString *basePath = (url==nil) ? [TiHost resourcePath] : [[[url path] stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"."];
-	_cilinkedin = [[cilinkedInObject alloc] initWithContext:kroll host:host context:self baseURL:[NSURL fileURLWithPath:basePath]];
+	_cilinkedin = [[cilinkedinObject alloc] initWithContext:kroll host:host context:self baseURL:[NSURL fileURLWithPath:basePath]];
 	
 	TiContextRef jsContext = [kroll context];
 	TiValueRef tiRef = [KrollObject toValue:kroll value:_cilinkedin];

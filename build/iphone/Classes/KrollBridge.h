@@ -16,7 +16,7 @@
 #import "KrollObject.h"
 #import "TiModule.h"
 
-@interface cilinkedInObject : KrollObject {
+@interface cilinkedinObject : KrollObject {
 @private
 	NSMutableDictionary *modules;
 	TiHost *host;
@@ -37,7 +37,7 @@
 	KrollContext *context;
 	NSDictionary *preload;
 	NSMutableDictionary *modules;
-	cilinkedInObject *_cilinkedin;
+	cilinkedinObject *_cilinkedin;
 	BOOL shutdown;
     BOOL evaluationError;
 	NSMutableArray *proxies;

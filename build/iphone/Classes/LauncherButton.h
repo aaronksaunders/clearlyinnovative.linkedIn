@@ -9,9 +9,9 @@
 
 
 // A good bit of this code was derived from the Three20 project
-// and was customized to work inside cilinkedIn
+// and was customized to work inside cilinkedin
 //
-// All modifications by cilinkedIn are licensed under 
+// All modifications by cilinkedin are licensed under 
 // the Apache License, Version 2.0
 //
 //

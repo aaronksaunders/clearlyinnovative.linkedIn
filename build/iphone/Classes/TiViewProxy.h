@@ -12,7 +12,7 @@
 
 @protocol TiKeyboardFocusableView
 
-#pragma mark Public cilinkedIn APIs.
+#pragma mark Public cilinkedin APIs.
 - (void)focus:(id)args;
 - (void)blur:(id)args;
 

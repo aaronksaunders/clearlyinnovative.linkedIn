@@ -206,13 +206,13 @@
         NSLog(@"[WARN] Invalid mode for audio recorder... setting to default.");
         newMode = kAudioSessionCategory_RecordAudio;
     }
-	NSLog(@"[WARN] 'cilinkedIn.Media.AudioRecorder.audioSessionMode' is deprecated; use 'cilinkedIn.Media.audioSessionMode'");
+	NSLog(@"[WARN] 'cilinkedin.Media.AudioRecorder.audioSessionMode' is deprecated; use 'cilinkedin.Media.audioSessionMode'");
 	[[TiMediaAudioSession sharedSession] setSessionMode:newMode];
 }
 
 -(NSNumber*)audioSessionMode
 {
-	NSLog(@"[WARN] 'cilinkedIn.Media.AudioRecorder.audioSessionMode' is deprecated; use 'cilinkedIn.Media.audioSessionMode'");	
+	NSLog(@"[WARN] 'cilinkedin.Media.AudioRecorder.audioSessionMode' is deprecated; use 'cilinkedin.Media.audioSessionMode'");	
     return [NSNumber numberWithUnsignedInt:[[TiMediaAudioSession sharedSession] sessionMode]];
 }
 

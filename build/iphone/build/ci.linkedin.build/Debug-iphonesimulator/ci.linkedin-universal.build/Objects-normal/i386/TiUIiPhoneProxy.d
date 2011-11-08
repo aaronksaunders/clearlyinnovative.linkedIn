@@ -1,0 +1,63 @@
+dependencies: \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUIiPhoneProxy.m \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUIiPhoneProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiBase.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiThreading.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiPublicAPI.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiEvaluator.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/KrollContext.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/headers/TiCore/TiCore.h \
+  headers/TiCore/Ti.h headers/TiCore/TiBase.h \
+  headers/TiCore/TiContextRef.h headers/TiCore/TiObjectRef.h \
+  headers/TiCore/TiValueRef.h headers/TiCore/WebKitAvailability.h \
+  headers/TiCore/TiStringRef.h headers/TiCore/TiStringRefCF.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/headers/TiCore/TiContextRefPrivate.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/KrollCallback.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/KrollObject.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUtils.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiColor.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiDimension.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/WebFont.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiFile.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiBuffer.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiBlob.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiApp.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiHost.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/Bridge.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiStylesheet.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/KrollBridge.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiModule.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/XHRBridge.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiRootViewController.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiRootController.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiWindowProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiViewProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUIView.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiAnimation.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiPoint.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/ListenerEntry.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/LayoutConstraint.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiGradient.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiTab.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiTabGroup.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUIWindow.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiViewController.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUIAnimationStyleProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUIStatusBarProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUIRowAnimationStyleProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUISystemButtonStyleProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUISystemButtonProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUIProgressBarStyleProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUIActivityIndicatorStyleProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUISystemIconProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUIScrollIndicatorStyleProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUITableViewStyleProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUITableViewSeparatorStyleProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUITableViewScrollPositionProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUITableViewCellSelectionStyleProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUIiPhoneNavigationGroupProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUIiPadProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUIiPadPopoverProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUIiPadSplitWindowProxy.h \
+  /Users/aaronksaunders/dev/modules/ios/ci.linkedin/build/iphone/Classes/TiUIiPadDocumentViewerProxy.h

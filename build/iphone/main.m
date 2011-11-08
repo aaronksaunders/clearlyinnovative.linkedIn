@@ -19,7 +19,7 @@ NSString * const TI_APPLICATION_GUID = @"7126a304-bda0-46d0-8cbd-dc1787aff298";
 BOOL const TI_APPLICATION_ANALYTICS = true;
 
 #ifdef TARGET_IPHONE_SIMULATOR
-NSString * const TI_APPLICATION_RESOURCE_DIR = @"/Users/aaronksaunders/Documents/Indulus/ci.linkedIn/Resources";
+NSString * const TI_APPLICATION_RESOURCE_DIR = @"/Users/aaronksaunders/dev/modules/ios/ci.linkedin/Resources";
 #endif
 
 int main(int argc, char *argv[]) {
