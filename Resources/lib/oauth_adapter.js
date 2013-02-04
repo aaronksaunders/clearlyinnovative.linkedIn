@@ -71,10 +71,10 @@ Ti.include('/lib/oauth.js');
 // create an OAuthAdapter instance
 var OAuthAdapter = function(pConsumerSecret, pConsumerKey, pSignatureMethod) {
 
-    Ti.API.info('*********************************************');
-    Ti.API.info('If you like the OAuth Adapter, consider donating at');
-    Ti.API.info('https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=T5HUU4J5EQTJU&lc=IT&item_name=OAuth%20Adapter&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted');
-    Ti.API.info('*********************************************');
+    Ti.API.debug('*********************************************');
+    Ti.API.debug('If you like the OAuth Adapter, consider donating at');
+    Ti.API.debug('https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=T5HUU4J5EQTJU&lc=IT&item_name=OAuth%20Adapter&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted');
+    Ti.API.debug('*********************************************');
 
     // will hold the consumer secret and consumer key as provided by the caller
     var consumerSecret = pConsumerSecret;
@@ -106,12 +106,39 @@ var OAuthAdapter = function(pConsumerSecret, pConsumerKey, pSignatureMethod) {
     var view = null;
     var webView = null;
     var receivePinCallback = null;
-
+	var _iOSPrivateDirectory = null;
+	function ensureDirectoryExists(path){
+		var test = Ti.Filesystem.getFile(path);
+		if(!test.exists()){
+			test.createDirectory();
+		}
+		test = null;
+	}
+	function iOSPrivateDocumentsDirectory(){
+		if(_iOSPrivateDirectory!=null){
+			return _iOSPrivateDirectory;
+		}
+		//Find the 
+		var testFile = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory);
+	   _iOSPrivateDirectory = testFile.nativePath.replace('Documents/','');
+	   _iOSPrivateDirectory+='Library/Private%20Documents/';
+	   testFile = null;
+	   ensureDirectoryExists(_iOSPrivateDirectory);
+	   return _iOSPrivateDirectory;
+	};
+		
+	function findStorageFile(pService){
+		var dir = Ti.Filesystem.applicationDataDirectory;
+		if (Ti.Platform.osname === 'iphone'){
+			dir = iOSPrivateDocumentsDirectory();	
+		}
+		return Ti.Filesystem.getFile(dir, pService + '.config');
+	};
+	
     this.loadAccessToken = function(pService) {
         Ti.API.debug('Loading access token for service [' + pService + '].');
-		Ti.API.debug(Ti.Filesystem.applicationDataDirectory, pService + '.config');
-        var file = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, pService + '.config');
-        if (file.exists == false)
+        var file = findStorageFile();
+        if (!file.exists())
             return;
 
         var contents = file.read();
@@ -132,11 +159,12 @@ var OAuthAdapter = function(pConsumerSecret, pConsumerKey, pSignatureMethod) {
         Ti.API.debug('Loading access token: done [accessToken:' + accessToken + '][accessTokenSecret:' + accessTokenSecret + '].');
         return config;
     };
-    this.saveAccessToken = function(pService) {
+    this.saveAccessToken = function(pService) {	
         Ti.API.debug('Saving access token [' + pService + '].');
-        var file = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, pService + '.config');
-        if (file == null)
-            file = Ti.Filesystem.createFile(Ti.Filesystem.applicationDataDirectory, pService + '.config');
+        var file = findStorageFile();
+        if (file.exists()){
+        	file.deleteFile();
+        }
         file.write(JSON.stringify({
             accessToken: accessToken,
             accessTokenSecret: accessTokenSecret
@@ -155,6 +183,7 @@ var OAuthAdapter = function(pConsumerSecret, pConsumerKey, pSignatureMethod) {
             method: 'POST',
             parameters: []
         };
+        
         message.parameters.push(['oauth_consumer_key', consumerKey]);
         message.parameters.push(['oauth_signature_method', signatureMethod]);
         return message;
@@ -164,24 +193,28 @@ var OAuthAdapter = function(pConsumerSecret, pConsumerKey, pSignatureMethod) {
         return pin;
     };
     // requests a requet token with the given Url
-    this.getRequestToken = function(pUrl) {
-        accessor.tokenSecret = '';
-
-        var message = createMessage(pUrl);
+    this.getRequestToken = function(pUrl,callback) {
+		
+		var message = createMessage(pUrl);
         OAuth.setTimestampAndNonce(message);
         OAuth.SignatureMethod.sign(message, accessor);
-
         var client = Ti.Network.createHTTPClient();
+		client.onload = function() {
+		try {
+			var responseParams = OAuth.getParameterMap(client.responseText);
+        	requestToken = responseParams['oauth_token'];
+        	requestTokenSecret = responseParams['oauth_token_secret'];
+		    accessToken = responseParams['oauth_token'];
+		    accessTokenSecret = responseParams['oauth_token_secret'];
+		       
+		       callback(client.responseText);
+			} catch(e){
+				alert(e.message);
+			}
+		}
         client.open('POST', pUrl, false);
-        client.send(OAuth.getParameterMap(message.parameters));
-
-        var responseParams = OAuth.getParameterMap(client.responseText);
-        requestToken = responseParams['oauth_token'];
-        requestTokenSecret = responseParams['oauth_token_secret'];
-
-        Ti.API.debug('request token got the following response: ' + client.responseText);
-
-        return client.responseText;
+		client.setTimeout(4000);
+        client.send(OAuth.getParameterMap(message.parameters)); 
     }
     // unloads the UI used to have the user authorize the application
     var destroyAuthorizeUI = function() {
@@ -337,7 +370,7 @@ var OAuthAdapter = function(pConsumerSecret, pConsumerKey, pSignatureMethod) {
         animation.duration = 500;
         view.animate(animation);
     };
-    this.getAccessToken = function(pUrl) {
+    this.getAccessToken = function(pUrl,callback) {
         accessor.tokenSecret = requestTokenSecret;
 
         var message = createMessage(pUrl);
@@ -352,16 +385,16 @@ var OAuthAdapter = function(pConsumerSecret, pConsumerKey, pSignatureMethod) {
             Ti.API.debug(p + ': ' + parameterMap[p]);
 
         var client = Ti.Network.createHTTPClient();
+		client.onload = function() {
+	        var responseParams = OAuth.getParameterMap(client.responseText);
+	        accessToken = responseParams['oauth_token'];
+	        accessTokenSecret = responseParams['oauth_token_secret'];
+	
+	        Ti.API.debug('*** get access token, Response: ' + client.responseText);
+	        callback(client.responseText);
+		};        
         client.open('POST', pUrl, false);
         client.send(parameterMap);
-
-        var responseParams = OAuth.getParameterMap(client.responseText);
-        accessToken = responseParams['oauth_token'];
-        accessTokenSecret = responseParams['oauth_token_secret'];
-
-        Ti.API.debug('*** get access token, Response: ' + client.responseText);
-
-        processQueue();
 
         return client.responseText;
 
