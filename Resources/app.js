@@ -7,7 +7,8 @@
  it as a module or open source
  
 */
-Ti.include('linkedin_module-min.js');
+
+var linkedInModule = require('linkedin_module-min'),
 
 //
 // MUST INITIALIZE WITH KEYS
@@ -15,6 +16,13 @@ Ti.include('linkedin_module-min.js');
 //
 linkedInModule.init('SECRET_KEY', 'API_KEY');
     
+//For a full list of permissions please visit
+//https://developer.linkedin.com/documents/authentication
+
+//Access Contacts
+linkedInModule.addPermission('r_network');
+//Access full profile
+linkedInModule.addPermission('r_fullprofile');
 
 
 // THESE CALLS WRAP COMMON FUNCTIONS
