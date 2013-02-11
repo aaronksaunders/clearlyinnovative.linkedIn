@@ -8,7 +8,7 @@
  
 */
 
-var linkedInModule = require('linkedin_module-min'),
+var linkedInModule = require('linkedin_module-min');
 
 //
 // MUST INITIALIZE WITH KEYS
